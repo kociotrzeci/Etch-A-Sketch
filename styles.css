@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+div{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    display: flex;
+    width: 800px;
+    flex-direction: column;
+}
+
+#header{
+    align-items: center;
+}
+
+#buttonContainer{
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: space-around;
+}
+
+#applicationWindow{
+    height: 0vmax;
+}
