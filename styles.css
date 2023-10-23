@@ -18,10 +18,22 @@ div{
 
 #buttonContainer{
     flex-direction: row;
-    align-content: stretch;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 100px;
 }
 
 #applicationWindow{
-    height: 0vmax;
+    aspect-ratio: 1;
+    margin: 50px;
+}
+
+#row{
+    flex-direction: row;
+    flex-grow: 1;
+    border-width: 0px;
+}
+
+.applicationWidth{
+    width: 700px;
+
 }

@@ -1,19 +1,36 @@
-let size = 16;
+function color(){
+    console.log("test");
+}
+
+
+let size = 32;
 const pixel = document.createElement("div");
 pixel.id = "pixel";
-pixel.textContent = "+";
-const row = document.createElement("div");
+pixel.addEventListener('click',color);
+
+
 const square = document.createElement("div");
 
-for (let i = 0; i<16;i++)
-{
-    row.appendChild(pixel);
-}
-for (let i; i<16;i++)
-{
-    square.appendChild(row);
-}
+
 
 const applicationWindow = document.querySelector("#applicationWindow");
-applicationWindow.textContent = "dupa";
-applicationWindow.appendChild(square);
+
+for (let i = 0; i<size; i++){
+    const row = document.createElement("div");
+    row.id = "row";
+    row.classList.add("applicationWidth");
+    for(let j = 0; j<size; j++)
+    {
+        const pixel = document.createElement("div");
+        pixel.id = "pixel";
+        pixel.addEventListener('click',color);
+        row.appendChild(pixel);
+    }
+    applicationWindow.appendChild(row);
+}
+
+
+
+
+
+//applicationWindow.appendChild(square); 
