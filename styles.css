@@ -4,9 +4,7 @@ body{
     flex-direction: column;
 }
 div{
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
+
     display: flex;
     width: 800px;
     flex-direction: column;
@@ -31,6 +29,13 @@ div{
     flex-direction: row;
     flex-grow: 1;
     border-width: 0px;
+}
+
+#pixel{
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 1px;
+    background-color: white;
 }
 
 .applicationWidth{
