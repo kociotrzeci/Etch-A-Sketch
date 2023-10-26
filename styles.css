@@ -5,7 +5,7 @@ body{
 }
 div{
     display: flex;
-    width: 800px;
+    width: 1000px;
     flex-direction: column;
 }
 
@@ -27,7 +27,7 @@ div{
     flex-shrink: 1;
 }
 #sizeContainer{
-    width: auto;
+    width: 100px;
     flex-direction: row;
     flex-shrink: 1;
 }
@@ -50,6 +50,6 @@ div{
 }
 
 .applicationWidth{
-    width: 700px;
+    width: 900px;
 
 }

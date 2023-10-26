@@ -4,13 +4,32 @@ function color(pixel){
 }
 
 function reset(){
+    while (applicationWindow.lastChild) applicationWindow.removeChild(applicationWindow.lastChild)
+    for (let i = 0; i<size; i++){
+        const row = document.createElement("div");
+        row.id = "row";
+        row.classList.add("applicationWidth");
+        for(let j = 0; j<size; j++)
+        {
+            const pixel = document.createElement("div");
+            pixel.id = "pixel";
+            pixel.addEventListener('mouseover',function(){
+                color(this);
+            });
+            row.appendChild(pixel);
+            console.log(j);
+        }
+        applicationWindow.appendChild(row);
+    }
     pixels = document.querySelectorAll("#pixel");
     console.log(1);
     pixels.forEach(element => {
         element.setAttribute('style','background-color: white;')   
     });
 
-}
+    }
+
+
 
 let size = 16;
 const resetButton = document.getElementById("reset");
@@ -26,25 +45,14 @@ whiteButton.addEventListener('click',function(e){paintColor = 'white'})
 const square = document.createElement("div");
 const applicationWindow = document.querySelector("#applicationWindow");
 
-for (let i = 0; i<size; i++){
-    const row = document.createElement("div");
-    row.id = "row";
-    row.classList.add("applicationWidth");
-    for(let j = 0; j<size; j++)
-    {
-        const pixel = document.createElement("div");
-        pixel.id = "pixel";
-        pixel.addEventListener('mouseover',function(){
-            color(this);
-        });
-        row.appendChild(pixel);
-    }
-    applicationWindow.appendChild(row);
-}
 
-const putSize = document.querySelector(".slider");
-const getSize = document.getElementById("size");
-getSize.addEventListener('input', function(e){console.log("a")})
+reset();
+const getSize = document.getElementById("slider");
+const putSize = document.getElementById("size");
+getSize.addEventListener('input', function(e){
+    putSize.textContent = this.value;
+    size = this.value;
+})
 
 
 
